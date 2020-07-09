@@ -34,6 +34,10 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* topHeader */
 
 .topHeader {
@@ -86,4 +90,67 @@ img {
     margin-left: 0.5rem;
     margin-bottom: 0.6rem;
     
+}
+
+.left__info {
+    margin-top: 4.5rem;
+}
+.left__iconColor {
+    color: #6a737d;
+}
+
+.left__iconColor1 {
+    color: #555555;
+}
+.left__name {
+    color: #24292e;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.left__gitUser {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+}
+
+.left__bio {
+    line-height: 1.5;
+    color: #24292e;
+    font-size: 16px;
+    margin-top: 1.5rem;
+}
+
+
+.left__achieve {
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left__achieveSpace {
+    margin-left: 0.3rem;
+}
+
+.left__achieveInfo {
+    display: flex;
+}
+
+.left__address {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+
+.left__point {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+.left__site {
+  
+    margin-bottom: 0.3rem;
 }
