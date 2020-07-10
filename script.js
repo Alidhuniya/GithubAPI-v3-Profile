@@ -75,19 +75,21 @@ const Repos = async () => {
     const url = "https://api.github.com/users/Alidhuniya/repos";
     const get = await fetch(url);
     const data = await get.json();
-    console.log(data);
+    // console.log(data[0].owner.login);
 
     
     let output = '';
+   
 
     for (let i in data) {
+        let url1 = `https://api.github.com/repos/${data[i].owner.login}/${data[i].name}/zipball/master`;
         output += `
       
-
+        
         <hr class="repos__hr" />
         <div class="repos__titleDown">
         <a href="${data[i].html_url}">${data[i].name}</a>
-        <a href="${data[i].archive_url}" class="repos__btnBlock">Downloads</a>
+        <a href="${url1}" class="repos__btnBlock">Downloads</a>
         </div>
     
         <div class="repos__descRdme">
