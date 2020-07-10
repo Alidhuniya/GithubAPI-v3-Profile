@@ -128,6 +128,45 @@ catch(error) {
 Repos();
 
 
+const Commits = async () => {
+
+    try {
+           
+    const url = "https://api.github.com/users/Alidhuniya/repos?per_page=1000";
+    const get = await fetch(url);
+    const data = await get.json();
+
+    var output = '';
+
+    for (var i in data) {
+      let ull = `https://api.github.com/repos/${data[i].owner.login}/${data[i].name}/commits`;
+      const get1 = await fetch(ull);
+      const data1 = await get1.json();
+       console.log(data1);
+        output += `
+        
+        <div class="repos__cmt">
+        <a target="blank" href="${ull}">Commits</a>
+        </div>
+       
+        `;
+    
+    }
+
+    document.querySelector(".commits").innerHTML = output;
+
+    
+
+    }
+
+
+    catch(error) {
+        console.log("Failed", error);
+    }
+
+}
+
+Commits();
 
 
 
