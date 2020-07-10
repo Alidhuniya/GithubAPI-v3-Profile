@@ -20,3 +20,7 @@ document.querySelector(".repos").innerHTML = `
     document.querySelector(".repos__btn").addEventListener("click", ()=> {
         location.href= "https://github.com/Alidhuniya/musician-band/blob/master/README.md";
     })
+
+    <div class="repos__btn">
+         <a href="" class="repos__btnBlock1">Read More </a>
+        </div>
