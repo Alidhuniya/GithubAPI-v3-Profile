@@ -38,6 +38,9 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
 /* topHeader */
 
 .topHeader {
@@ -153,4 +156,34 @@ a {
 .left__site {
   
     margin-bottom: 0.3rem;
+}
+
+/* right side */
+/* navbar */
+
+.right {
+   width: 60%; 
+}
+
+.right__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e1e4e8;
+  
+    margin-left: 7rem;
+}
+
+.right__navColor {
+    color: #1b1f23;
+    font-weight: 600;
+   
+}
+
+.right__navBtm {
+    border-bottom: 2px solid #f9826c;
+}
+
+.right__repo {
+    cursor: pointer;
 }
