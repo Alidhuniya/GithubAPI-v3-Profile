@@ -71,13 +71,18 @@ document.querySelector(".right__repo").addEventListener("click", ()=> {
 const Repos = async () => {
 
     try {
+       
+        
     
-    const url = "https://api.github.com/users/Alidhuniya/repos";
+    const url = "https://api.github.com/users/Alidhuniya/repos?per_page=1000";
     const get = await fetch(url);
     const data = await get.json();
     // console.log(data[0].owner.login);
-    
-        
+
+    // next
+   
+
+  
     var output = '';
 
     for (var i in data) {
@@ -88,8 +93,8 @@ const Repos = async () => {
         // console.log(data1[0].html_url);
        
         output += `
-      
-        
+      <div class="repos__lists">
+
         <hr class="repos__hr" />
         <div class="repos__titleDown">
         <a href="${data[i].html_url}">${data[i].name}</a>
@@ -99,19 +104,18 @@ const Repos = async () => {
         <div class="repos__descRdme">
         <p class="repos__desc">${data[i].description}</p>
         <div class="repos__btn">
-         <a href="${data1[0].html_url}" class="repos__btnBlock1">Read More </a>
+         <a target="blank" href="${data1[0].html_url}" class="repos__btnBlock1">Read More </a>
         </div>
         </div>
-
+    
+       </div>
        
         `;
     
-        
     }
 
-
     document.querySelector(".repos").innerHTML = output;
-
+   
    
     
 
@@ -121,6 +125,9 @@ catch(error) {
 }
 
 }
-
 Repos();
+
+
+
+
 
