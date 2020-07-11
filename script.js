@@ -97,7 +97,7 @@ const Repos = async () => {
 
         <hr class="repos__hr" />
         <div class="repos__titleDown">
-        <a href="${data[i].html_url}">${data[i].name}</a>
+        <a class="heading" href="${data[i].html_url}">${data[i].name}</a>
         <a href="${downloads}" class="repos__btnBlock">Downloads</a>
         </div>
     
@@ -108,7 +108,7 @@ const Repos = async () => {
         </div>
         </div>
 
-        <div>
+        <div class="date">
 
         <span> Created at: ${data[i].created_at}</span>
         <span> Updated at: ${data[i].updated_at}</span>

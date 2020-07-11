@@ -58,7 +58,7 @@ li {
 
 /* left-section */
 .main {
-    margin: 4rem 9rem 0rem 9rem;
+    margin: 4rem 9rem 9rem 9rem;
 }
 .main__contents {
     display: flex;
@@ -212,10 +212,87 @@ li {
     cursor: pointer;
     color: #fff;
     background-color: #2ea44f;
+    padding: 0.5rem;
     border-color: rgba(27,31,35,.15);
     box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03);
 }
 
 .repos__btnBlock1 {
     cursor: pointer;
+}
+
+.heading {
+    color: #0366d6;
+    font-size: 20px;
+}
+
+.repos__titleDown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repos__desc {
+    color: #586069;
+    font-size: 14px;
+}
+
+.repos__btn {
+    margin-top: 0.3rem;
+}
+
+.repos__btn > a {
+    font-size: 1.1rem;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.date {
+    margin-top: 1.5rem;
+}
+
+.date > span {
+    color: #424c57;
+    font-size: 16px;
+}
+
+@media all and (max-width: 1155px) {
+    .repos__titleDown {
+        display: block;
+        
+    }
+
+   
+}
+
+@media all and (max-width: 1100px) {
+    .right__nav {
+        display: block;
+    }
+
+    .right__repo + .right__repo {
+        margin-left: 0rem;
+    }
+
+    .right__navLi {
+        margin-top: 1.3rem;
+    }
+    
+}
+
+@media all and (max-width: 768px) {
+    .main__contents {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .right__nav, .right__contents {
+        margin-left: 0rem;
+    }
+
+    
 }
