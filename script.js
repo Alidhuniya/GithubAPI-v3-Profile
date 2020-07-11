@@ -107,8 +107,17 @@ const Repos = async () => {
          <a target="blank" href="${data1[0].html_url}" class="repos__btnBlock1">Read More </a>
         </div>
         </div>
+
+        <div>
+
+        <span> Created at: ${data[i].created_at}</span>
+        <span> Updated at: ${data[i].updated_at}</span>
+
+        </div>
     
        </div>
+
+       
        
         `;
     
@@ -127,46 +136,14 @@ catch(error) {
 }
 Repos();
 
-
-const Commits = async () => {
-
-    try {
-           
-    const url = "https://api.github.com/users/Alidhuniya/repos?per_page=1000";
-    const get = await fetch(url);
-    const data = await get.json();
-
-    var output = '';
-
-    for (var i in data) {
-      let ull = `https://api.github.com/repos/${data[i].owner.login}/${data[i].name}/commits`;
-      const get1 = await fetch(ull);
-      const data1 = await get1.json();
-       console.log(data1);
-        output += `
-        
-        <div class="repos__cmt">
-        <a target="blank" href="${ull}">Commits</a>
-        </div>
-       
-        `;
-    
-    }
-
-    document.querySelector(".commits").innerHTML = output;
-
-    
-
-    }
+setTimeout(function () {
+    document.getElementById("hide").style.display = "none";
+  }, 16500);
 
 
-    catch(error) {
-        console.log("Failed", error);
-    }
 
-}
 
-Commits();
+
 
 
 

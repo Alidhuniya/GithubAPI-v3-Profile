@@ -167,11 +167,15 @@ li {
 
 .right__nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     border-bottom: 1px solid #e1e4e8;
   margin-top: 1rem;
     margin-left: 7rem;
+}
+
+.right__repo + .right__repo {
+    margin-left: 15rem;
 }
 
 .right__navColor {
@@ -186,7 +190,7 @@ li {
 
 .right__contents {
     margin-left: 7rem;
-    margin-top: 9rem;
+    margin-top: 4rem;
 }
 .right__repo {
     cursor: pointer;
